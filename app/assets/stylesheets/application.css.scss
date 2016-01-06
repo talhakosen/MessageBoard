@@ -37,7 +37,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Navbar styles */
-
 .navbar {
 	font-family: 'Muli', sans-serif;
 	text-transform: uppercase;
@@ -48,6 +47,11 @@ h1, h2, h3, h4, h5, h6 {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-color: #fff;
+
+	.navbar-nav > p {
+	 	vertical-align: middle;
+		padding-top: 15px;
+	}
 
 	.navbar-nav > li > a {
 		color: #222;

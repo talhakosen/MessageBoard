@@ -13,20 +13,20 @@
 		<div class="navbar-header">
 			<%= link_to "Message Board", root_path, class:"navbar-brand" %>
 			<ul class="nav navbar-nav">
-				
 				<% if user_signed_in? %>
+					<li><%= link_to "New message", new_message_path %></li>
 					<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
-					<li>welcome <%= current_user.email %></li>
 				<% else %>
 					<li><%= link_to "Sign Up", new_user_registration_path %> </li>
 					<li><%= link_to "Sign In", new_user_session_path %> </li>
 				<% end %>
 			</ul> 
 		</div>
-			
-			<% if user_signed_in? %>
-				<p><%= link_to "New message", new_message_path, class:"navbar-right navbar-text navbar-link" %></p>
-			<% end %>
+		<div class="nav navbar-nav navbar-right"> 
+				<% if user_signed_in? %>
+					<p>welcome <%= current_user.email %></p>
+				<% end %>
+		</div> 
 	</div>
 </div>	
 <p class="notice"><%= notice %></p>
